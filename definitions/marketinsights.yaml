@@ -1,0 +1,460 @@
+paths:
+  /datasets:
+    post:
+      tags:
+        - dataset
+      summary: Create a new instance of the model and persist it into the data source.
+      operationId: dataset.create
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/dataset'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/dataset'
+      deprecated: false
+    put:
+      tags:
+        - dataset
+      summary: >-
+        Patch an existing model instance or insert a new one into the data
+        source.
+      operationId: dataset.upsert__put_datasets
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/dataset'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/dataset'
+      deprecated: false
+    patch:
+      tags:
+        - dataset
+      summary: >-
+        Patch an existing model instance or insert a new one into the data
+        source.
+      operationId: dataset.upsert__patch_datasets
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/dataset'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/dataset'
+      deprecated: false
+    get:
+      tags:
+        - dataset
+      summary: Find all instances of the model matched by filter from the data source.
+      operationId: dataset.find
+      parameters:
+        - name: filter
+          in: query
+          description: >-
+            Filter defining fields, where, include, order, offset, and limit -
+            must be a JSON-encoded string ({"something":"value"})
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/dataset'
+      deprecated: false
+  /datasets/replaceOrCreate:
+    post:
+      tags:
+        - dataset
+      summary: >-
+        Replace an existing model instance or insert a new one into the data
+        source.
+      operationId: dataset.replaceOrCreate
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/dataset'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/dataset'
+      deprecated: false
+  /datasets/upsertWithWhere:
+    post:
+      tags:
+        - dataset
+      summary: >-
+        Update an existing model instance or insert a new one into the data
+        source based on the where criteria.
+      operationId: dataset.upsertWithWhere
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/dataset'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/dataset'
+      deprecated: false
+  '/datasets/{id}/exists':
+    get:
+      tags:
+        - dataset
+      summary: Check whether a model instance exists in the data source.
+      operationId: 'dataset.exists__get_datasets_{id}_exists'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              exists:
+                type: boolean
+      deprecated: false
+  '/datasets/{id}':
+    head:
+      tags:
+        - dataset
+      summary: Check whether a model instance exists in the data source.
+      operationId: 'dataset.exists__head_datasets_{id}'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              exists:
+                type: boolean
+      deprecated: false
+    get:
+      tags:
+        - dataset
+      summary: 'Find a model instance by {{id}} from the data source.'
+      operationId: dataset.findById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: filter
+          in: query
+          description: >-
+            Filter defining fields and include - must be a JSON-encoded string
+            ({"something":"value"})
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/dataset'
+      deprecated: false
+    delete:
+      tags:
+        - dataset
+      summary: 'Delete a model instance by {{id}} from the data source.'
+      operationId: dataset.deleteById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+      deprecated: false
+    put:
+      tags:
+        - dataset
+      summary: >-
+        Patch attributes for a model instance and persist it into the data
+        source.
+      operationId: 'dataset.prototype.updateAttributes__put_datasets_{id}'
+      parameters:
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/dataset'
+        - name: id
+          in: path
+          description: dataset id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/dataset'
+      deprecated: false
+    patch:
+      tags:
+        - dataset
+      summary: >-
+        Patch attributes for a model instance and persist it into the data
+        source.
+      operationId: 'dataset.prototype.updateAttributes__patch_datasets_{id}'
+      parameters:
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/dataset'
+        - name: id
+          in: path
+          description: dataset id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/dataset'
+      deprecated: false
+  '/datasets/{id}/replace':
+    post:
+      tags:
+        - dataset
+      summary: >-
+        Replace attributes for a model instance and persist it into the data
+        source.
+      operationId: dataset.replaceById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/dataset'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/dataset'
+      deprecated: false
+  /datasets/findOne:
+    get:
+      tags:
+        - dataset
+      summary: Find first instance of the model matched by filter from the data source.
+      operationId: dataset.findOne
+      parameters:
+        - name: filter
+          in: query
+          description: >-
+            Filter defining fields, where, include, order, offset, and limit -
+            must be a JSON-encoded string ({"something":"value"})
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/dataset'
+      deprecated: false
+  /datasets/update:
+    post:
+      tags:
+        - dataset
+      summary: 'Update instances of the model matched by {{where}} from the data source.'
+      operationId: dataset.updateAll
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/dataset'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            description: Information related to the outcome of the operation
+            type: object
+            properties:
+              count:
+                description: The number of instances updated
+                type: number
+                format: double
+      deprecated: false
+  /datasets/count:
+    get:
+      tags:
+        - dataset
+      summary: Count instances of the model matched by where from the data source.
+      operationId: dataset.count
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              count:
+                type: number
+                format: double
+      deprecated: false
+definitions:
+  dataset:
+    properties:
+      data:
+        type: array
+        items:
+          type: object
+      id:
+        type: string
+      index:
+        type: array
+        items:
+          type: string
+          format: date-time
+      market:
+        type: string
+      pipelineID:
+        type: string
+    required:
+      - data
+      - id
+      - index
+      - market
+      - pipelineID
+    additionalProperties: false
+  x-any:
+    properties: {}
+basePath: /v1
+swagger: '2.0'
+info:
+  x-ibm-name: marketinsights
+  version: 1.0.0
+  title: marketinsights
+schemes:
+  - https
+consumes:
+  - application/json
+produces:
+  - application/json
+securityDefinitions:
+  clientIdHeader:
+    type: apiKey
+    in: header
+    name: X-IBM-Client-Id
+  clientSecretHeader:
+    in: header
+    name: X-IBM-Client-Secret
+    type: apiKey
+security:
+  - clientIdHeader: []
+    clientSecretHeader: []
+x-ibm-configuration:
+  testable: true
+  enforced: true
+  cors:
+    enabled: true
+  catalogs:
+    apic-dev:
+      properties:
+        runtime-url: $(TARGET_URL)
+    api:
+      properties:
+        runtime-url: 'https://app1.marketinsightsonline.com'
+        invoke-tls-profile: mioclientserverprofile
+  assembly:
+    execute:
+      - invoke:
+          target-url: $(runtime-url)$(request.path)$(request.search)
+          tls-profile: $(invoke-tls-profile)
+  properties:
+    runtime-url:
+      value: ''
+      description: ''
+      encoded: false
+    invoke-tls-profile:
+      value: ''
+      description: ''
+      encoded: false
+host: $(catalog.host)

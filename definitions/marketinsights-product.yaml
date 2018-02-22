@@ -1,0 +1,21 @@
+product: 1.0.0
+info:
+  name: marketinsights
+  title: marketinsights
+  version: 1.0.0
+apis:
+  marketinsights:
+    $ref: marketinsights.yaml
+visibility:
+  view:
+    type: public
+  subscribe:
+    type: authenticated
+plans:
+  default:
+    title: MIO Plan
+    description: Default Plan
+    approval: false
+    rate-limit:
+      value: 100/1minute
+      hard-limit: false
