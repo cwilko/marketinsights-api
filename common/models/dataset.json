@@ -1,0 +1,50 @@
+{
+  "name": "dataset",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "data": {
+      "type": [
+        "object"
+      ],
+      "required": true,
+      "isArray": true
+    },
+    "id": {
+      "type": "string",
+      "id": true,
+      "required": true,
+      "isArray": false
+    },
+    "index": {
+      "type": [
+        "date"
+      ],
+      "required": true,
+      "index": false,
+      "isArray": true
+    },
+    "market": {
+      "type": "string",
+      "id": false,
+      "required": true,
+      "index": false,
+      "isArray": false
+    },
+    "pipelineID": {
+      "type": "string",
+      "id": false,
+      "required": true,
+      "index": false,
+      "isArray": false,
+      "deleted": false
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}
