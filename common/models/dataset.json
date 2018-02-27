@@ -21,7 +21,7 @@
     },
     "index": {
       "type": [
-        "date"
+        "string"
       ],
       "required": true,
       "index": false,
@@ -41,6 +41,11 @@
       "index": false,
       "isArray": false,
       "deleted": false
+    },
+    "tz": {
+      "type": "string",
+      "required": true,
+      "description": "timezone"
     }
   },
   "validations": [],
