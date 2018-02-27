@@ -392,10 +392,12 @@ definitions:
         type: array
         items:
           type: string
-          format: date-time
       market:
         type: string
       pipelineID:
+        type: string
+      tz:
+        description: timezone
         type: string
     required:
       - data
@@ -403,6 +405,7 @@ definitions:
       - index
       - market
       - pipelineID
+      - tz
     additionalProperties: false
   x-any:
     properties: {}
