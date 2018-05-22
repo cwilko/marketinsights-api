@@ -1,0 +1,74 @@
+{
+  "name": "prediction",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "data": {
+      "type": [
+        "number"
+      ],
+      "required": true,
+      "isArray": true,
+      "updateResource": {
+        "id": "common.prediction.classes",
+        "modelId": "common.prediction",
+        "facetName": "common",
+        "name": "classes",
+        "type": [
+          "number"
+        ],
+        "required": false,
+        "isArray": true
+      }
+    },
+    "market": {
+      "type": "string",
+      "required": true,
+      "updateResource": {
+        "id": "common.prediction.market",
+        "modelId": "common.prediction",
+        "facetName": "common",
+        "name": "market",
+        "type": "string",
+        "required": false
+      }
+    },
+    "model_id": {
+      "type": "string",
+      "required": true,
+      "updateResource": {
+        "id": "common.prediction.model_id",
+        "modelId": "common.prediction",
+        "facetName": "common",
+        "name": "model_id",
+        "type": "string",
+        "required": false
+      }
+    },
+    "timestamp": {
+      "type": "date",
+      "required": true,
+      "updateResource": {
+        "id": "common.prediction.timestamp",
+        "modelId": "common.prediction",
+        "facetName": "common",
+        "name": "timestamp",
+        "type": "date",
+        "required": false
+      }
+    },
+    "id": {
+      "type": "string",
+      "id": true,
+      "required": true,
+      "isArray": false
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

@@ -1,0 +1,45 @@
+{
+  "name": "model",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "model_id": {
+      "type": "string",
+      "id": true,
+      "required": true,
+      "isArray": false
+    },
+    "model_desc": {
+      "type": "string",
+      "required": false
+    },
+    "runtime": {
+      "type": "string",
+      "required": true
+    },
+    "network": {
+      "type": "object",
+      "required": false
+    },
+    "optimizer": {
+      "type": "object",
+      "required": false
+    },
+    "training": {
+      "type": "object",
+      "required": false,
+      "isArray": false
+    },
+    "debug": {
+      "type": "boolean",
+      "required": false
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}
