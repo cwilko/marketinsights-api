@@ -16,5 +16,13 @@
   "dataset": {
     "dataSource": "insightsDB",
     "public": true
+  },
+  "prediction": {
+    "dataSource": "predictions",
+    "public": true
+  },
+  "model": {
+    "dataSource": "modelsDB",
+    "public": true
   }
 }
