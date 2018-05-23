@@ -1,0 +1,78 @@
+swagger: '2.0'
+basePath: /
+paths:
+  '/marketinsights/predict/{model_id}/{training_id}':
+    parameters:
+      - name: model_id
+        in: path
+        required: true
+        type: string
+      - name: training_id
+        in: path
+        required: true
+        type: string
+    post:
+      responses:
+        '200':
+          description: Success
+          schema:
+            $ref: '#/definitions/Provide the features dataset:'
+      operationId: post_model
+      parameters:
+        - name: payload
+          required: true
+          in: body
+          schema:
+            $ref: '#/definitions/Provide the features dataset:'
+      tags:
+        - marketinsights
+info:
+  title: MarketInsights Model API
+  version: '1.0'
+  x-ibm-name: marketinsights-model-api
+produces:
+  - application/json
+consumes:
+  - application/json
+tags:
+  - name: default
+    description: Default namespace
+  - name: marketinsights
+    description: 'Train, Deploy, and Score models via the MarketInsights API'
+definitions:
+  'Provide the features dataset:':
+    properties:
+      market:
+        type: string
+      data:
+        type: array
+        items:
+          type: array
+          items:
+            type: number
+      tz:
+        type: string
+      index:
+        type: array
+        items:
+          type: string
+    type: object
+responses:
+  ParseError:
+    description: When a mask can't be parsed
+  MaskError:
+    description: When any error occurs on mask
+x-ibm-configuration:
+  enforced: true
+  testable: true
+  phase: realized
+  cors:
+    enabled: true
+  assembly:
+    execute:
+      - invoke:
+          target-url: 'http://marketinsights-model-api.mybluemix.net$(request.path)'
+    catch: []
+host: $(catalog.host)
+schemes:
+  - https

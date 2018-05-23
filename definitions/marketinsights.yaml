@@ -1217,7 +1217,7 @@ swagger: '2.0'
 info:
   x-ibm-name: marketinsights
   version: 1.0.0
-  title: marketinsights
+  title: MarketInsights Core API
 schemes:
   - https
 consumes:
