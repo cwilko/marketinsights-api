@@ -6,6 +6,8 @@ info:
 apis:
   marketinsights:
     $ref: marketinsights.yaml
+  marketinsights-model-api:
+    $ref: marketinsights-model-api_1.0.yaml
 visibility:
   view:
     type: public
