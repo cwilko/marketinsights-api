@@ -13,11 +13,10 @@
       "required": true,
       "isArray": true
     },
-    "id": {
-      "type": "string",
-      "id": true,
+    "dataset_desc": {
+      "type": "object",
       "required": true,
-      "isArray": false
+      "description": "Dataset descriptor"
     },
     "index": {
       "type": [
@@ -34,18 +33,16 @@
       "index": false,
       "isArray": false
     },
-    "pipelineID": {
-      "type": "string",
-      "id": false,
-      "required": true,
-      "index": false,
-      "isArray": false,
-      "deleted": false
-    },
     "tz": {
       "type": "string",
       "required": true,
       "description": "timezone"
+    },
+    "id": {
+      "type": "string",
+      "id": true,
+      "required": true,
+      "isArray": false
     }
   },
   "validations": [],

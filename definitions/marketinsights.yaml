@@ -22,9 +22,7 @@ paths:
     put:
       tags:
         - dataset
-      summary: >-
-        Patch an existing model instance or insert a new one into the data
-        source.
+      summary: Patch an existing model instance or insert a new one into the data source.
       operationId: dataset.upsert__put_datasets
       parameters:
         - name: data
@@ -43,9 +41,7 @@ paths:
     patch:
       tags:
         - dataset
-      summary: >-
-        Patch an existing model instance or insert a new one into the data
-        source.
+      summary: Patch an existing model instance or insert a new one into the data source.
       operationId: dataset.upsert__patch_datasets
       parameters:
         - name: data
@@ -69,9 +65,7 @@ paths:
       parameters:
         - name: filter
           in: query
-          description: >-
-            Filter defining fields, where, include, order, offset, and limit -
-            must be a JSON-encoded string ({"something":"value"})
+          description: 'Filter defining fields, where, include, order, offset, and limit - must be a JSON-encoded string ({"something":"value"})'
           required: false
           type: string
           format: JSON
@@ -87,9 +81,7 @@ paths:
     post:
       tags:
         - dataset
-      summary: >-
-        Replace an existing model instance or insert a new one into the data
-        source.
+      summary: Replace an existing model instance or insert a new one into the data source.
       operationId: dataset.replaceOrCreate
       parameters:
         - name: data
@@ -109,9 +101,7 @@ paths:
     post:
       tags:
         - dataset
-      summary: >-
-        Update an existing model instance or insert a new one into the data
-        source based on the where criteria.
+      summary: Update an existing model instance or insert a new one into the data source based on the where criteria.
       operationId: dataset.upsertWithWhere
       parameters:
         - name: where
@@ -191,9 +181,7 @@ paths:
           format: JSON
         - name: filter
           in: query
-          description: >-
-            Filter defining fields and include - must be a JSON-encoded string
-            ({"something":"value"})
+          description: 'Filter defining fields and include - must be a JSON-encoded string ({"something":"value"})'
           required: false
           type: string
           format: JSON
@@ -224,9 +212,7 @@ paths:
     put:
       tags:
         - dataset
-      summary: >-
-        Patch attributes for a model instance and persist it into the data
-        source.
+      summary: Patch attributes for a model instance and persist it into the data source.
       operationId: 'dataset.prototype.updateAttributes__put_datasets_{id}'
       parameters:
         - name: data
@@ -251,9 +237,7 @@ paths:
     patch:
       tags:
         - dataset
-      summary: >-
-        Patch attributes for a model instance and persist it into the data
-        source.
+      summary: Patch attributes for a model instance and persist it into the data source.
       operationId: 'dataset.prototype.updateAttributes__patch_datasets_{id}'
       parameters:
         - name: data
@@ -279,9 +263,7 @@ paths:
     post:
       tags:
         - dataset
-      summary: >-
-        Replace attributes for a model instance and persist it into the data
-        source.
+      summary: Replace attributes for a model instance and persist it into the data source.
       operationId: dataset.replaceById
       parameters:
         - name: id
@@ -312,9 +294,7 @@ paths:
       parameters:
         - name: filter
           in: query
-          description: >-
-            Filter defining fields, where, include, order, offset, and limit -
-            must be a JSON-encoded string ({"something":"value"})
+          description: 'Filter defining fields, where, include, order, offset, and limit - must be a JSON-encoded string ({"something":"value"})'
           required: false
           type: string
           format: JSON
@@ -402,9 +382,7 @@ paths:
     put:
       tags:
         - prediction
-      summary: >-
-        Patch an existing model instance or insert a new one into the data
-        source.
+      summary: Patch an existing model instance or insert a new one into the data source.
       operationId: prediction.upsert__put_predictions
       parameters:
         - name: data
@@ -423,9 +401,7 @@ paths:
     patch:
       tags:
         - prediction
-      summary: >-
-        Patch an existing model instance or insert a new one into the data
-        source.
+      summary: Patch an existing model instance or insert a new one into the data source.
       operationId: prediction.upsert__patch_predictions
       parameters:
         - name: data
@@ -449,9 +425,7 @@ paths:
       parameters:
         - name: filter
           in: query
-          description: >-
-            Filter defining fields, where, include, order, offset, and limit -
-            must be a JSON-encoded string ({"something":"value"})
+          description: 'Filter defining fields, where, include, order, offset, and limit - must be a JSON-encoded string ({"something":"value"})'
           required: false
           type: string
           format: JSON
@@ -467,9 +441,7 @@ paths:
     post:
       tags:
         - prediction
-      summary: >-
-        Replace an existing model instance or insert a new one into the data
-        source.
+      summary: Replace an existing model instance or insert a new one into the data source.
       operationId: prediction.replaceOrCreate
       parameters:
         - name: data
@@ -489,9 +461,7 @@ paths:
     post:
       tags:
         - prediction
-      summary: >-
-        Update an existing model instance or insert a new one into the data
-        source based on the where criteria.
+      summary: Update an existing model instance or insert a new one into the data source based on the where criteria.
       operationId: prediction.upsertWithWhere
       parameters:
         - name: where
@@ -571,9 +541,7 @@ paths:
           format: JSON
         - name: filter
           in: query
-          description: >-
-            Filter defining fields and include - must be a JSON-encoded string
-            ({"something":"value"})
+          description: 'Filter defining fields and include - must be a JSON-encoded string ({"something":"value"})'
           required: false
           type: string
           format: JSON
@@ -604,9 +572,7 @@ paths:
     put:
       tags:
         - prediction
-      summary: >-
-        Patch attributes for a model instance and persist it into the data
-        source.
+      summary: Patch attributes for a model instance and persist it into the data source.
       operationId: 'prediction.prototype.updateAttributes__put_predictions_{id}'
       parameters:
         - name: data
@@ -631,9 +597,7 @@ paths:
     patch:
       tags:
         - prediction
-      summary: >-
-        Patch attributes for a model instance and persist it into the data
-        source.
+      summary: Patch attributes for a model instance and persist it into the data source.
       operationId: 'prediction.prototype.updateAttributes__patch_predictions_{id}'
       parameters:
         - name: data
@@ -659,9 +623,7 @@ paths:
     post:
       tags:
         - prediction
-      summary: >-
-        Replace attributes for a model instance and persist it into the data
-        source.
+      summary: Replace attributes for a model instance and persist it into the data source.
       operationId: prediction.replaceById
       parameters:
         - name: id
@@ -692,9 +654,7 @@ paths:
       parameters:
         - name: filter
           in: query
-          description: >-
-            Filter defining fields, where, include, order, offset, and limit -
-            must be a JSON-encoded string ({"something":"value"})
+          description: 'Filter defining fields, where, include, order, offset, and limit - must be a JSON-encoded string ({"something":"value"})'
           required: false
           type: string
           format: JSON
@@ -782,9 +742,7 @@ paths:
     put:
       tags:
         - model
-      summary: >-
-        Patch an existing model instance or insert a new one into the data
-        source.
+      summary: Patch an existing model instance or insert a new one into the data source.
       operationId: model.upsert__put_models
       parameters:
         - name: data
@@ -803,9 +761,7 @@ paths:
     patch:
       tags:
         - model
-      summary: >-
-        Patch an existing model instance or insert a new one into the data
-        source.
+      summary: Patch an existing model instance or insert a new one into the data source.
       operationId: model.upsert__patch_models
       parameters:
         - name: data
@@ -829,9 +785,7 @@ paths:
       parameters:
         - name: filter
           in: query
-          description: >-
-            Filter defining fields, where, include, order, offset, and limit -
-            must be a JSON-encoded string ({"something":"value"})
+          description: 'Filter defining fields, where, include, order, offset, and limit - must be a JSON-encoded string ({"something":"value"})'
           required: false
           type: string
           format: JSON
@@ -847,9 +801,7 @@ paths:
     post:
       tags:
         - model
-      summary: >-
-        Replace an existing model instance or insert a new one into the data
-        source.
+      summary: Replace an existing model instance or insert a new one into the data source.
       operationId: model.replaceOrCreate
       parameters:
         - name: data
@@ -869,9 +821,7 @@ paths:
     post:
       tags:
         - model
-      summary: >-
-        Update an existing model instance or insert a new one into the data
-        source based on the where criteria.
+      summary: Update an existing model instance or insert a new one into the data source based on the where criteria.
       operationId: model.upsertWithWhere
       parameters:
         - name: where
@@ -951,9 +901,7 @@ paths:
           format: JSON
         - name: filter
           in: query
-          description: >-
-            Filter defining fields and include - must be a JSON-encoded string
-            ({"something":"value"})
+          description: 'Filter defining fields and include - must be a JSON-encoded string ({"something":"value"})'
           required: false
           type: string
           format: JSON
@@ -984,9 +932,7 @@ paths:
     put:
       tags:
         - model
-      summary: >-
-        Patch attributes for a model instance and persist it into the data
-        source.
+      summary: Patch attributes for a model instance and persist it into the data source.
       operationId: 'model.prototype.updateAttributes__put_models_{id}'
       parameters:
         - name: data
@@ -1011,9 +957,7 @@ paths:
     patch:
       tags:
         - model
-      summary: >-
-        Patch attributes for a model instance and persist it into the data
-        source.
+      summary: Patch attributes for a model instance and persist it into the data source.
       operationId: 'model.prototype.updateAttributes__patch_models_{id}'
       parameters:
         - name: data
@@ -1039,9 +983,7 @@ paths:
     post:
       tags:
         - model
-      summary: >-
-        Replace attributes for a model instance and persist it into the data
-        source.
+      summary: Replace attributes for a model instance and persist it into the data source.
       operationId: model.replaceById
       parameters:
         - name: id
@@ -1072,9 +1014,7 @@ paths:
       parameters:
         - name: filter
           in: query
-          description: >-
-            Filter defining fields, where, include, order, offset, and limit -
-            must be a JSON-encoded string ({"something":"value"})
+          description: 'Filter defining fields, where, include, order, offset, and limit - must be a JSON-encoded string ({"something":"value"})'
           required: false
           type: string
           format: JSON
@@ -1146,26 +1086,27 @@ definitions:
         type: array
         items:
           type: object
-      id:
-        type: string
+      dataset_desc:
+        description: Dataset descriptor
+        type: object
       index:
         type: array
         items:
           type: string
       market:
         type: string
-      pipelineID:
-        type: string
       tz:
         description: timezone
         type: string
+      id:
+        type: string
     required:
       - data
-      - id
+      - dataset_desc
       - index
       - market
-      - pipelineID
       - tz
+      - id
     additionalProperties: false
   x-any:
     properties: {}
