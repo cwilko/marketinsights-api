@@ -1,0 +1,31 @@
+{
+  "name": "training_run",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "id": {
+      "type": "string",
+      "id": true,
+      "required": true,
+      "isArray": false
+    },
+    "model_id": {
+      "type": "string",
+      "required": true
+    },
+    "datasets": {
+      "type": [
+        "string"
+      ],
+      "required": true,
+      "isArray": true
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

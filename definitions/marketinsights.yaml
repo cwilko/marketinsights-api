@@ -22,7 +22,9 @@ paths:
     put:
       tags:
         - dataset
-      summary: Patch an existing model instance or insert a new one into the data source.
+      summary: >-
+        Patch an existing model instance or insert a new one into the data
+        source.
       operationId: dataset.upsert__put_datasets
       parameters:
         - name: data
@@ -41,7 +43,9 @@ paths:
     patch:
       tags:
         - dataset
-      summary: Patch an existing model instance or insert a new one into the data source.
+      summary: >-
+        Patch an existing model instance or insert a new one into the data
+        source.
       operationId: dataset.upsert__patch_datasets
       parameters:
         - name: data
@@ -65,7 +69,9 @@ paths:
       parameters:
         - name: filter
           in: query
-          description: 'Filter defining fields, where, include, order, offset, and limit - must be a JSON-encoded string ({"something":"value"})'
+          description: >-
+            Filter defining fields, where, include, order, offset, and limit -
+            must be a JSON-encoded string ({"something":"value"})
           required: false
           type: string
           format: JSON
@@ -81,7 +87,9 @@ paths:
     post:
       tags:
         - dataset
-      summary: Replace an existing model instance or insert a new one into the data source.
+      summary: >-
+        Replace an existing model instance or insert a new one into the data
+        source.
       operationId: dataset.replaceOrCreate
       parameters:
         - name: data
@@ -101,7 +109,9 @@ paths:
     post:
       tags:
         - dataset
-      summary: Update an existing model instance or insert a new one into the data source based on the where criteria.
+      summary: >-
+        Update an existing model instance or insert a new one into the data
+        source based on the where criteria.
       operationId: dataset.upsertWithWhere
       parameters:
         - name: where
@@ -181,7 +191,9 @@ paths:
           format: JSON
         - name: filter
           in: query
-          description: 'Filter defining fields and include - must be a JSON-encoded string ({"something":"value"})'
+          description: >-
+            Filter defining fields and include - must be a JSON-encoded string
+            ({"something":"value"})
           required: false
           type: string
           format: JSON
@@ -212,7 +224,9 @@ paths:
     put:
       tags:
         - dataset
-      summary: Patch attributes for a model instance and persist it into the data source.
+      summary: >-
+        Patch attributes for a model instance and persist it into the data
+        source.
       operationId: 'dataset.prototype.updateAttributes__put_datasets_{id}'
       parameters:
         - name: data
@@ -237,7 +251,9 @@ paths:
     patch:
       tags:
         - dataset
-      summary: Patch attributes for a model instance and persist it into the data source.
+      summary: >-
+        Patch attributes for a model instance and persist it into the data
+        source.
       operationId: 'dataset.prototype.updateAttributes__patch_datasets_{id}'
       parameters:
         - name: data
@@ -263,7 +279,9 @@ paths:
     post:
       tags:
         - dataset
-      summary: Replace attributes for a model instance and persist it into the data source.
+      summary: >-
+        Replace attributes for a model instance and persist it into the data
+        source.
       operationId: dataset.replaceById
       parameters:
         - name: id
@@ -294,7 +312,9 @@ paths:
       parameters:
         - name: filter
           in: query
-          description: 'Filter defining fields, where, include, order, offset, and limit - must be a JSON-encoded string ({"something":"value"})'
+          description: >-
+            Filter defining fields, where, include, order, offset, and limit -
+            must be a JSON-encoded string ({"something":"value"})
           required: false
           type: string
           format: JSON
@@ -382,7 +402,9 @@ paths:
     put:
       tags:
         - prediction
-      summary: Patch an existing model instance or insert a new one into the data source.
+      summary: >-
+        Patch an existing model instance or insert a new one into the data
+        source.
       operationId: prediction.upsert__put_predictions
       parameters:
         - name: data
@@ -401,7 +423,9 @@ paths:
     patch:
       tags:
         - prediction
-      summary: Patch an existing model instance or insert a new one into the data source.
+      summary: >-
+        Patch an existing model instance or insert a new one into the data
+        source.
       operationId: prediction.upsert__patch_predictions
       parameters:
         - name: data
@@ -425,7 +449,9 @@ paths:
       parameters:
         - name: filter
           in: query
-          description: 'Filter defining fields, where, include, order, offset, and limit - must be a JSON-encoded string ({"something":"value"})'
+          description: >-
+            Filter defining fields, where, include, order, offset, and limit -
+            must be a JSON-encoded string ({"something":"value"})
           required: false
           type: string
           format: JSON
@@ -441,7 +467,9 @@ paths:
     post:
       tags:
         - prediction
-      summary: Replace an existing model instance or insert a new one into the data source.
+      summary: >-
+        Replace an existing model instance or insert a new one into the data
+        source.
       operationId: prediction.replaceOrCreate
       parameters:
         - name: data
@@ -461,7 +489,9 @@ paths:
     post:
       tags:
         - prediction
-      summary: Update an existing model instance or insert a new one into the data source based on the where criteria.
+      summary: >-
+        Update an existing model instance or insert a new one into the data
+        source based on the where criteria.
       operationId: prediction.upsertWithWhere
       parameters:
         - name: where
@@ -541,7 +571,9 @@ paths:
           format: JSON
         - name: filter
           in: query
-          description: 'Filter defining fields and include - must be a JSON-encoded string ({"something":"value"})'
+          description: >-
+            Filter defining fields and include - must be a JSON-encoded string
+            ({"something":"value"})
           required: false
           type: string
           format: JSON
@@ -572,7 +604,9 @@ paths:
     put:
       tags:
         - prediction
-      summary: Patch attributes for a model instance and persist it into the data source.
+      summary: >-
+        Patch attributes for a model instance and persist it into the data
+        source.
       operationId: 'prediction.prototype.updateAttributes__put_predictions_{id}'
       parameters:
         - name: data
@@ -597,7 +631,9 @@ paths:
     patch:
       tags:
         - prediction
-      summary: Patch attributes for a model instance and persist it into the data source.
+      summary: >-
+        Patch attributes for a model instance and persist it into the data
+        source.
       operationId: 'prediction.prototype.updateAttributes__patch_predictions_{id}'
       parameters:
         - name: data
@@ -623,7 +659,9 @@ paths:
     post:
       tags:
         - prediction
-      summary: Replace attributes for a model instance and persist it into the data source.
+      summary: >-
+        Replace attributes for a model instance and persist it into the data
+        source.
       operationId: prediction.replaceById
       parameters:
         - name: id
@@ -654,7 +692,9 @@ paths:
       parameters:
         - name: filter
           in: query
-          description: 'Filter defining fields, where, include, order, offset, and limit - must be a JSON-encoded string ({"something":"value"})'
+          description: >-
+            Filter defining fields, where, include, order, offset, and limit -
+            must be a JSON-encoded string ({"something":"value"})
           required: false
           type: string
           format: JSON
@@ -742,7 +782,9 @@ paths:
     put:
       tags:
         - model
-      summary: Patch an existing model instance or insert a new one into the data source.
+      summary: >-
+        Patch an existing model instance or insert a new one into the data
+        source.
       operationId: model.upsert__put_models
       parameters:
         - name: data
@@ -761,7 +803,9 @@ paths:
     patch:
       tags:
         - model
-      summary: Patch an existing model instance or insert a new one into the data source.
+      summary: >-
+        Patch an existing model instance or insert a new one into the data
+        source.
       operationId: model.upsert__patch_models
       parameters:
         - name: data
@@ -785,7 +829,9 @@ paths:
       parameters:
         - name: filter
           in: query
-          description: 'Filter defining fields, where, include, order, offset, and limit - must be a JSON-encoded string ({"something":"value"})'
+          description: >-
+            Filter defining fields, where, include, order, offset, and limit -
+            must be a JSON-encoded string ({"something":"value"})
           required: false
           type: string
           format: JSON
@@ -801,7 +847,9 @@ paths:
     post:
       tags:
         - model
-      summary: Replace an existing model instance or insert a new one into the data source.
+      summary: >-
+        Replace an existing model instance or insert a new one into the data
+        source.
       operationId: model.replaceOrCreate
       parameters:
         - name: data
@@ -821,7 +869,9 @@ paths:
     post:
       tags:
         - model
-      summary: Update an existing model instance or insert a new one into the data source based on the where criteria.
+      summary: >-
+        Update an existing model instance or insert a new one into the data
+        source based on the where criteria.
       operationId: model.upsertWithWhere
       parameters:
         - name: where
@@ -901,7 +951,9 @@ paths:
           format: JSON
         - name: filter
           in: query
-          description: 'Filter defining fields and include - must be a JSON-encoded string ({"something":"value"})'
+          description: >-
+            Filter defining fields and include - must be a JSON-encoded string
+            ({"something":"value"})
           required: false
           type: string
           format: JSON
@@ -932,7 +984,9 @@ paths:
     put:
       tags:
         - model
-      summary: Patch attributes for a model instance and persist it into the data source.
+      summary: >-
+        Patch attributes for a model instance and persist it into the data
+        source.
       operationId: 'model.prototype.updateAttributes__put_models_{id}'
       parameters:
         - name: data
@@ -957,7 +1011,9 @@ paths:
     patch:
       tags:
         - model
-      summary: Patch attributes for a model instance and persist it into the data source.
+      summary: >-
+        Patch attributes for a model instance and persist it into the data
+        source.
       operationId: 'model.prototype.updateAttributes__patch_models_{id}'
       parameters:
         - name: data
@@ -983,7 +1039,9 @@ paths:
     post:
       tags:
         - model
-      summary: Replace attributes for a model instance and persist it into the data source.
+      summary: >-
+        Replace attributes for a model instance and persist it into the data
+        source.
       operationId: model.replaceById
       parameters:
         - name: id
@@ -1014,7 +1072,9 @@ paths:
       parameters:
         - name: filter
           in: query
-          description: 'Filter defining fields, where, include, order, offset, and limit - must be a JSON-encoded string ({"something":"value"})'
+          description: >-
+            Filter defining fields, where, include, order, offset, and limit -
+            must be a JSON-encoded string ({"something":"value"})
           required: false
           type: string
           format: JSON
@@ -1062,6 +1122,386 @@ paths:
         - model
       summary: Count instances of the model matched by where from the data source.
       operationId: model.count
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              count:
+                type: number
+                format: double
+      deprecated: false
+  /training_runs:
+    post:
+      tags:
+        - training_run
+      summary: Create a new instance of the model and persist it into the data source.
+      operationId: training_run.create
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/training_run'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/training_run'
+      deprecated: false
+    put:
+      tags:
+        - training_run
+      summary: >-
+        Patch an existing model instance or insert a new one into the data
+        source.
+      operationId: training_run.upsert__put_training_runs
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/training_run'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/training_run'
+      deprecated: false
+    patch:
+      tags:
+        - training_run
+      summary: >-
+        Patch an existing model instance or insert a new one into the data
+        source.
+      operationId: training_run.upsert__patch_training_runs
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/training_run'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/training_run'
+      deprecated: false
+    get:
+      tags:
+        - training_run
+      summary: Find all instances of the model matched by filter from the data source.
+      operationId: training_run.find
+      parameters:
+        - name: filter
+          in: query
+          description: >-
+            Filter defining fields, where, include, order, offset, and limit -
+            must be a JSON-encoded string ({"something":"value"})
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/training_run'
+      deprecated: false
+  /training_runs/replaceOrCreate:
+    post:
+      tags:
+        - training_run
+      summary: >-
+        Replace an existing model instance or insert a new one into the data
+        source.
+      operationId: training_run.replaceOrCreate
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/training_run'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/training_run'
+      deprecated: false
+  /training_runs/upsertWithWhere:
+    post:
+      tags:
+        - training_run
+      summary: >-
+        Update an existing model instance or insert a new one into the data
+        source based on the where criteria.
+      operationId: training_run.upsertWithWhere
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/training_run'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/training_run'
+      deprecated: false
+  '/training_runs/{id}/exists':
+    get:
+      tags:
+        - training_run
+      summary: Check whether a model instance exists in the data source.
+      operationId: 'training_run.exists__get_training_runs_{id}_exists'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              exists:
+                type: boolean
+      deprecated: false
+  '/training_runs/{id}':
+    head:
+      tags:
+        - training_run
+      summary: Check whether a model instance exists in the data source.
+      operationId: 'training_run.exists__head_training_runs_{id}'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              exists:
+                type: boolean
+      deprecated: false
+    get:
+      tags:
+        - training_run
+      summary: 'Find a model instance by {{id}} from the data source.'
+      operationId: training_run.findById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: filter
+          in: query
+          description: >-
+            Filter defining fields and include - must be a JSON-encoded string
+            ({"something":"value"})
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/training_run'
+      deprecated: false
+    delete:
+      tags:
+        - training_run
+      summary: 'Delete a model instance by {{id}} from the data source.'
+      operationId: training_run.deleteById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+      deprecated: false
+    put:
+      tags:
+        - training_run
+      summary: >-
+        Patch attributes for a model instance and persist it into the data
+        source.
+      operationId: 'training_run.prototype.updateAttributes__put_training_runs_{id}'
+      parameters:
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/training_run'
+        - name: id
+          in: path
+          description: training_run id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/training_run'
+      deprecated: false
+    patch:
+      tags:
+        - training_run
+      summary: >-
+        Patch attributes for a model instance and persist it into the data
+        source.
+      operationId: 'training_run.prototype.updateAttributes__patch_training_runs_{id}'
+      parameters:
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/training_run'
+        - name: id
+          in: path
+          description: training_run id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/training_run'
+      deprecated: false
+  '/training_runs/{id}/replace':
+    post:
+      tags:
+        - training_run
+      summary: >-
+        Replace attributes for a model instance and persist it into the data
+        source.
+      operationId: training_run.replaceById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/training_run'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/training_run'
+      deprecated: false
+  /training_runs/findOne:
+    get:
+      tags:
+        - training_run
+      summary: Find first instance of the model matched by filter from the data source.
+      operationId: training_run.findOne
+      parameters:
+        - name: filter
+          in: query
+          description: >-
+            Filter defining fields, where, include, order, offset, and limit -
+            must be a JSON-encoded string ({"something":"value"})
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/training_run'
+      deprecated: false
+  /training_runs/update:
+    post:
+      tags:
+        - training_run
+      summary: 'Update instances of the model matched by {{where}} from the data source.'
+      operationId: training_run.updateAll
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/training_run'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            description: Information related to the outcome of the operation
+            type: object
+            properties:
+              count:
+                description: The number of instances updated
+                type: number
+                format: double
+      deprecated: false
+  /training_runs/count:
+    get:
+      tags:
+        - training_run
+      summary: Count instances of the model matched by where from the data source.
+      operationId: training_run.count
       parameters:
         - name: where
           in: query
@@ -1152,6 +1592,21 @@ definitions:
     required:
       - model_id
       - runtime
+    additionalProperties: false
+  training_run:
+    properties:
+      id:
+        type: string
+      model_id:
+        type: string
+      datasets:
+        type: array
+        items:
+          type: string
+    required:
+      - id
+      - model_id
+      - datasets
     additionalProperties: false
 basePath: /v1
 swagger: '2.0'
