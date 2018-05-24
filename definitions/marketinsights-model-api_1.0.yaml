@@ -71,8 +71,30 @@ x-ibm-configuration:
   assembly:
     execute:
       - invoke:
-          target-url: 'http://marketinsights-model-api.mybluemix.net$(request.path)'
+          target-url: 'https://app2.marketinsightsonline.com$(request.path)'
+          tls-profile: $(invoke-tls-profile)
     catch: []
+  properties:
+    invoke-tls-profile:
+      value: ''
+      description: ''
+      encoded: false
+  catalogs:
+    api:
+      properties:
+        invoke-tls-profile: mioclientserverprofile
 host: $(catalog.host)
 schemes:
   - https
+securityDefinitions:
+  clientIdHeader:
+    type: apiKey
+    in: header
+    name: X-IBM-Client-Id
+  clientSecretHeader:
+    in: header
+    name: X-IBM-Client-Secret
+    type: apiKey
+security:
+  - clientIdHeader: []
+    clientSecretHeader: []
