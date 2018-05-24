@@ -1,12 +1,8 @@
 swagger: '2.0'
 basePath: /
 paths:
-  '/marketinsights/predict/{model_id}/{training_id}':
+  '/marketinsights/predict/{training_id}':
     parameters:
-      - name: model_id
-        in: path
-        required: true
-        type: string
       - name: training_id
         in: path
         required: true
