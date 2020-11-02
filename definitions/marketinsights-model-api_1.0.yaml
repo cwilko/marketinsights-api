@@ -68,7 +68,7 @@ x-ibm-configuration:
     execute:
       - invoke:
           target-url: 'https://app2.marketinsightsonline.com$(request.path)'
-          tls-profile: $(invoke-tls-profile)
+          tls-profile: mioclientserverprofile
     catch: []
   properties:
     invoke-tls-profile:
@@ -79,18 +79,8 @@ x-ibm-configuration:
     api:
       properties:
         invoke-tls-profile: mioclientserverprofile
+  gateway: datapower-gateway
 host: $(catalog.host)
 schemes:
   - https
-securityDefinitions:
-  clientIdHeader:
-    type: apiKey
-    in: header
-    name: X-IBM-Client-Id
-  clientSecretHeader:
-    in: header
-    name: X-IBM-Client-Secret
-    type: apiKey
-security:
-  - clientIdHeader: []
-    clientSecretHeader: []
+securityDefinitions: {}

@@ -3,6 +3,7 @@ info:
   name: marketinsights
   title: marketinsights
   version: 1.0.0
+  description: Market Insights product
 apis:
   marketinsights:
     $ref: marketinsights.yaml
