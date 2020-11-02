@@ -1519,95 +1519,6 @@ paths:
                 type: number
                 format: double
       deprecated: false
-definitions:
-  dataset:
-    properties:
-      data:
-        type: array
-        items:
-          type: object
-      dataset_desc:
-        description: Dataset descriptor
-        type: object
-      index:
-        type: array
-        items:
-          type: string
-      market:
-        type: string
-      tz:
-        description: timezone
-        type: string
-      id:
-        type: string
-    required:
-      - data
-      - dataset_desc
-      - index
-      - market
-      - tz
-      - id
-    additionalProperties: false
-  x-any:
-    properties: {}
-  prediction:
-    properties:
-      data:
-        type: array
-        items:
-          type: number
-          format: double
-      market:
-        type: string
-      model_id:
-        type: string
-      timestamp:
-        type: string
-        format: date-time
-      id:
-        type: string
-    required:
-      - data
-      - market
-      - model_id
-      - timestamp
-      - id
-    additionalProperties: false
-  model:
-    properties:
-      model_id:
-        type: string
-      model_desc:
-        type: string
-      runtime:
-        type: string
-      network:
-        type: object
-      optimizer:
-        type: object
-      training:
-        type: object
-      debug:
-        type: boolean
-    required:
-      - model_id
-      - runtime
-    additionalProperties: false
-  training_run:
-    properties:
-      id:
-        type: string
-      model_id:
-        type: string
-      datasets:
-        type: array
-        items:
-          type: string
-    required:
-      - id
-      - model_id
-      - datasets
-    additionalProperties: false
 basePath: /v1
 swagger: '2.0'
 info:
@@ -1620,18 +1531,7 @@ consumes:
   - application/json
 produces:
   - application/json
-securityDefinitions:
-  clientIdHeader:
-    type: apiKey
-    in: header
-    name: X-IBM-Client-Id
-  clientSecretHeader:
-    in: header
-    name: X-IBM-Client-Secret
-    type: apiKey
-security:
-  - clientIdHeader: []
-    clientSecretHeader: []
+securityDefinitions: {}
 x-ibm-configuration:
   testable: true
   enforced: true
@@ -1648,15 +1548,16 @@ x-ibm-configuration:
   assembly:
     execute:
       - invoke:
-          target-url: $(runtime-url)$(request.path)$(request.search)
-          tls-profile: $(invoke-tls-profile)
+          target-url: >-
+            https://app1.marketinsightsonline.com$(request.path)$(request.search)
+          tls-profile: mioclientserverprofile
   properties:
     runtime-url:
       value: ''
       description: ''
       encoded: false
     invoke-tls-profile:
-      value: ''
+      value: mioclientserverprofile
       description: ''
       encoded: false
 host: $(catalog.host)

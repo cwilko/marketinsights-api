@@ -21,3 +21,6 @@ cert
 .targets
 .apiconnect
 issues.txt
+.pytest_cache
+package-lock.json
+server/datasources.json
