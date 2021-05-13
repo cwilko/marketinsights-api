@@ -1,9 +1,29 @@
-'use strict';
-
 var loopback = require('loopback');
 var boot = require('loopback-boot');
+//var fs = require('fs');
 
+// Load the necessary modules and middleware for HTTPS
+//var http = require('http');
+//var https = require('https');
+
+//var privateKey  = fs.readFileSync('./cert/key.pem', 'utf8');
+//var certificate = fs.readFileSync('./cert/cert.pem', 'utf8');
+//var credentials = {key: privateKey, cert: certificate};
+
+// Get an app server instance from LoopBack
 var app = module.exports = loopback();
+
+app.enable('trust proxy')
+
+// -- Add your pre-processing middleware here --
+app.use( function(req, res, next) {
+  if (req.secure) {
+    next();
+  } else {
+    console.log('https://' + req.headers.host + req.url)
+    res.redirect('https://' + req.headers.host + req.url);
+  }
+});
 
 app.start = function() {
   // start the web server
@@ -27,3 +47,6 @@ boot(app, __dirname, function(err) {
   if (require.main === module)
     app.start();
 });
+
+
+
