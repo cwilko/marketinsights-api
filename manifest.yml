@@ -1,6 +1,8 @@
 applications: #Reference http://docs.cloudfoundry.com/docs/using/deploying-apps/manifest.html
 - name: marketinsights #Application Name. Unique to the user's Space
   memory: 256M #The maximum memory to allocate to each application instance
+  routes: 
+    - route: app1.marketinsightsonline.com
 
 
 
