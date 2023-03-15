@@ -16,14 +16,14 @@ var app = module.exports = loopback();
 app.enable('trust proxy')
 
 // -- Add your pre-processing middleware here --
-app.use( function(req, res, next) {
-  if (req.secure) {
-    next();
-  } else {
-    console.log('https://' + req.headers.host + req.url)
-    res.redirect('https://' + req.headers.host + req.url);
-  }
-});
+//app.use( function(req, res, next) {
+//  if (req.secure) {
+//   next();
+//  } else {
+//    console.log('https://' + req.headers.host + req.url)
+//    res.redirect('https://' + req.headers.host + req.url);
+//  }
+//});
 
 app.start = function() {
   // start the web server
