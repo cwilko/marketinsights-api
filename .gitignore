@@ -19,8 +19,7 @@ node_modules
 npm-debug.log
 cert
 .targets
-.apiconnect
-issues.txt
+.apiconnect/*
 .pytest_cache
 package-lock.json
-server/datasources.json
+server/*

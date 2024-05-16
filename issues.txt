@@ -1,0 +1,4 @@
+1. Allows creation of property type ['Date'] which is not supported by loopback (i.e. an Array of Dates)
+2. Cannot deploy any app using apic due to inability to create new <appname>.apic.mybluemix.net domain.
+3. Overwrites TLS Profile changes with default value when re-deploying app
+4. 
