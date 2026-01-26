@@ -22,4 +22,3 @@ cert
 .apiconnect/*
 .pytest_cache
 package-lock.json
-server/*
